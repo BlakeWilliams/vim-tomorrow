@@ -322,6 +322,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
 	call <SID>X("rubyConditional", s:purple, "", "")
 	call <SID>X("rubyRepeat", s:purple, "", "")
+	call <SID>X("rubyRegexpDelimiter", s:red, "", "")
+	call <SID>X("rubyRegexpEscape", s:orange, "", "")
+	call <SID>X("rubyRegexp", s:red, "", "")
+
+    " Rails Highlighting
+	call <SID>X("rubyRailsMethod", s:foreground, "", "")
+	call <SID>X("rubyRailsUserClass", s:yellow, "", "")
 
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
@@ -341,6 +348,39 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
 
+    " CSS Highlighting
+    call <SID>X("cssTagName", s:purple, "", "")
+    call <SID>X("cssColor", s:aqua, "", "")
+    call <SID>X("cssFontAttr", s:orange, "", "")
+    call <SID>X("cssTextAttr", s:orange, "", "")
+    call <SID>X("cssBoxAttr", s:orange, "", "")
+    call <SID>X("cssGeneratedContentAttr", s:orange, "", "")
+    call <SID>X("cssRenderAttr", s:orange, "", "")
+    call <SID>X("cssPagingAttr", s:orange, "", "")
+    call <SID>X("cssUIAttr", s:orange, "", "")
+    call <SID>X("cssAuralAttr", s:orange, "", "")
+    call <SID>X("cssTableAttr", s:orange, "", "")
+    call <SID>X("cssFontProp", s:yellow, "", "")
+    call <SID>X("cssTextProp", s:yellow, "", "")
+    call <SID>X("cssColorProp", s:yellow, "", "")
+    call <SID>X("cssBoxProp", s:yellow, "", "")
+    call <SID>X("cssGeneratedContentProp", s:yellow, "", "")
+    call <SID>X("cssRenderProp", s:yellow, "", "")
+    call <SID>X("cssPagingProp", s:yellow, "", "")
+    call <SID>X("cssUIProp", s:yellow, "", "")
+    call <SID>X("cssAuralProp", s:yellow, "", "")
+    call <SID>X("cssTableProp", s:yellow, "", "")
+
+    " SCSS Highlighting
+    call <SID>X("sassComment", s:comment, "", "")
+    call <SID>X("sassIdChar", s:red, "", "")
+    call <SID>X("sassClass", s:red, "", "")
+    call <SID>X("sassClassChar", s:red, "", "")
+    call <SID>X("sassInterpolation", s:yellow, "", "")
+    call <SID>X("sassAmpersand", s:red, "", "")
+    call <SID>X("sassCssAttribute", s:orange, "", "")
+    
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
@@ -352,3 +392,4 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	delf <SID>grey_level
 	delf <SID>grey_number
 endif
+
