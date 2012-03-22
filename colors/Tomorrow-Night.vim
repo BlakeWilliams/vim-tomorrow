@@ -382,7 +382,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("cssBraces", s:foreground, "", "")
     call <SID>X("cssURL", s:orange, "", "")
     call <SID>X("cssPseudoClass", s:foreground, "", "")
-    call <SID>X("cssClassName", s:foreground, "", "")
+    call <SID>X("cssClassName", s:red, "", "")
     call <SID>X("cssImportant", s:purple, "", "")
     call <SID>X("cssString", s:green, "", "")
     call <SID>X("cssUnicodeEscape", s:green, "", "")
