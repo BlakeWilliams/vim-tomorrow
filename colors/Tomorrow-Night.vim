@@ -245,10 +245,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
+	call <SID>X("Error", s:red, s:background, "")
 	call <SID>X("LineNr", "686868", "262626", "")
 	call <SID>X("NonText", s:background, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
-	call <SID>X("Search", s:background, s:aqua, "")
+	call <SID>X("Search", s:background, s:green, "")
 	call <SID>X("TabLine", s:foreground, s:background, "reverse")
 	call <SID>X("StatusLine", s:gray, s:white, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
@@ -317,7 +318,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyAttribute", s:blue, "", "")
 	call <SID>X("rubyInclude", s:blue, "", "")
 	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
-	call <SID>X("rubyCurlyBlock", s:orange, "", "")
+	call <SID>X("rubyCurlyBlock", s:foreground, "", "")
 	call <SID>X("rubyStringDelimiter", s:green, "", "")
 	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
 	call <SID>X("rubyConditional", s:purple, "", "")
@@ -325,6 +326,17 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyRegexpDelimiter", s:red, "", "")
 	call <SID>X("rubyRegexpEscape", s:orange, "", "")
 	call <SID>X("rubyRegexp", s:red, "", "")
+	call <SID>X("rubyPseudoVariable", s:red, "", "")
+	call <SID>X("rubyOperator", s:aqua, "", "")
+
+    " Rails Highlighting
+	call <SID>X("rubyRailsMethod", s:foreground, "", "")
+	call <SID>X("rubyRailsUserClass", s:yellow, "", "")
+	call <SID>X("railslogEscapeSQL", s:foreground, "", "")
+
+    " eruby Highlighting
+	call <SID>X("erubyBlock", s:foreground, "", "")
+	call <SID>X("erubyDelimiter", s:orange, "", "")
 
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
@@ -347,6 +359,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " CSS Highlighting
     call <SID>X("cssTagName", s:purple, "", "")
     call <SID>X("cssColor", s:aqua, "", "")
+    call <SID>X("cssColorAttr", s:orange, "", "")
     call <SID>X("cssFontAttr", s:orange, "", "")
     call <SID>X("cssTextAttr", s:orange, "", "")
     call <SID>X("cssBoxAttr", s:orange, "", "")
@@ -366,6 +379,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("cssUIProp", s:yellow, "", "")
     call <SID>X("cssAuralProp", s:yellow, "", "")
     call <SID>X("cssTableProp", s:yellow, "", "")
+    call <SID>X("cssBraces", s:foreground, "", "")
+    call <SID>X("cssURL", s:orange, "", "")
+    call <SID>X("cssPseudoClass", s:foreground, "", "")
+    call <SID>X("cssClassName", s:foreground, "", "")
+    call <SID>X("cssImportant", s:purple, "", "")
+    call <SID>X("cssString", s:green, "", "")
+    call <SID>X("cssUnicodeEscape", s:green, "", "")
+
 
     " SCSS Highlighting
     call <SID>X("sassComment", s:comment, "", "")
@@ -375,7 +396,37 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("sassInterpolation", s:yellow, "", "")
     call <SID>X("sassAmpersand", s:red, "", "")
     call <SID>X("sassCssAttribute", s:orange, "", "")
-    
+    call <SID>X("sassVariable", s:purple, "", "")
+    call <SID>X("sassInclude", s:blue, "", "")
+
+
+    " HTML Highlighting
+    call <SID>X("htmlTag", s:red, "", "")
+    call <SID>X("htmlEndTag", s:red, "", "")
+    call <SID>X("htmlTagName", s:red, "", "")
+    call <SID>X("htmlSpecialTagName", s:red, "", "")
+    call <SID>X("htmlSpecialChar", s:orange, "", "")
+    call <SID>X("htmlTag", s:red, "", "")
+    call <SID>X("htmlArg", s:red, "", "")
+    call <SID>X("htmlLink", s:foreground, "", "")
+    call <SID>X("htmlH1", s:foreground, "", "")
+    call <SID>X("htmlH2", s:foreground, "", "")
+    call <SID>X("htmlH3", s:foreground, "", "")
+    call <SID>X("htmlH4", s:foreground, "", "")
+    call <SID>X("htmlH5", s:foreground, "", "")
+    call <SID>X("htmlH6", s:foreground, "", "")
+
+
+    " CoffeeScript
+    call <SID>X("coffeeExtendedOp", s:aqua, "", "")
+    call <SID>X("coffeeKeyword", s:aqua, "", "")
+    call <SID>X("coffeeObject", s:foreground, "", "")
+    call <SID>X("coffeeObjAssign", s:red, "", "")
+
+    " Javascript
+    call <SID>X("javascriptMember", s:yellow, "", "")
+    call <SID>X("javaScriptIdentifier", s:red, "", "")
+
 
 	" Delete Functions
 	delf <SID>X
