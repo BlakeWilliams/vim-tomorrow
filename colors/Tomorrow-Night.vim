@@ -33,7 +33,7 @@ set background=dark
 hi clear
 syntax reset
 
-let g:colors_name = "Tomorrow-Night"
+let g:colors_name = "tomorrow-night"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
@@ -246,7 +246,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
 	call <SID>X("Error", s:red, s:background, "")
-	call <SID>X("LineNr", "686868", "262626", "")
+	call <SID>X("LineNr", "686868", s:background, "")
 	call <SID>X("NonText", s:background, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:green, "")
